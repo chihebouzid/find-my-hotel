@@ -1,0 +1,69 @@
+.carousel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.carousel__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 150ms ease-out;
+  transform: translatex(0px);
+}
+
+.carousel-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.carousel-overflow-container{
+  overflow: hidden;
+}
+
+.carousel__card {
+    margin: 0 5px 0 5px;
+}
+
+.carousel__nav-btns{
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  position: absolute;  
+}
+
+.nav-btn__left, .nav-btn__right{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 2px solid orange;
+    border-right: 2px solid orange;
+    cursor: pointer;
+    margin: 0;
+    transition: transform 150ms linear;
+}
+
+.nav-btn--disabled {
+  opacity: 0.2;
+  border-color: black;
+}
+
+.nav-btn__left {
+  transform: rotate(-135deg);
+  &:active {
+    transform: rotate(-135deg) scale(0.9);
+  }
+}
+
+.nav-btn__right {
+    transform: rotate(45deg);
+    &:active {
+      transform: rotate(45deg) scale(0.9);
+    }
+}

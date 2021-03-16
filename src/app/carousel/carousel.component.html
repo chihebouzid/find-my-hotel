@@ -1,0 +1,36 @@
+<div class="carousel">
+  <div class="carousel-wrapper">
+    <div class="carousel-overflow-container">
+      <div
+        class="carousel__cards"
+        [ngStyle]="{
+          transform: 'translateX' + '(' + currentOffset + 'px' + ')'
+        }"
+      >
+        <div class="carousel__card">
+          <app-card></app-card>
+        </div>
+        <div class="carousel__card">
+          <app-card></app-card>
+        </div>
+        <div class="carousel__card">
+          <app-card></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel__nav-btns">
+    <div
+      class="nav-btn__left"
+      [class.nav-btn--disabled]="isHeadOfList"
+      (click)="moveCarousel(-1)"
+    ></div>
+
+    <div
+      class="nav-btn__right"
+      [class.nav-btn--disabled]="isEndOfList"
+      (click)="moveCarousel(1)"
+    ></div>
+  </div>
+</div>

@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 
 import { GoogleMapsModule } from '@angular/google-maps';
+import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent],
+  declarations: [AppComponent, MapComponent, CardComponent, CarouselComponent],
   imports: [BrowserModule, AppRoutingModule, GoogleMapsModule],
   providers: [],
   bootstrap: [AppComponent],
