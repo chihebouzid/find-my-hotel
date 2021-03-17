@@ -1,0 +1,35 @@
+<header id="header" class="header">
+  <div class="header__content">
+    <div class="site-content">
+      <div class="main-menu">
+        <a
+          href="https://www.limehome.com/"
+          id="qa_header-logo"
+          class="header__home-link--logo"
+        >
+          <img src="../../assets/limehome_logo.svg" alt="limehome logo"
+        /></a>
+        <div id="main-menu__items" aria-label="Menu Items">
+          <div class="hamburger-menu">
+            <input
+              type="checkbox"
+              id="hamburger-menu__input"
+              class="hamburger-menu__input"
+              (click)="toggleMenu($event)"
+            />
+            <label for="hamburger-menu__input" class="hamburger-menu__toggle">
+              <div class="hamburger-spinner hamburger-spinner--top"></div>
+              <div class="hamburger-spinner hamburger-spinner--bottom"></div>
+            </label>
+          </div>
+          <div
+            class="hamburger-menu__content"
+            [ngClass]="{ 'hamburger-menu__content--menu-open': openMenu }"
+          >
+            <app-header-menu></app-header-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

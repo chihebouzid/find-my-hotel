@@ -8,9 +8,11 @@ import { MapComponent } from './map/map.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { HeaderComponent } from './header/header.component';
+import { HeaderMenuComponent } from './header-menu/header-menu.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, CardComponent, CarouselComponent],
+  declarations: [AppComponent, MapComponent, CardComponent, CarouselComponent, HeaderComponent, HeaderMenuComponent],
   imports: [BrowserModule, AppRoutingModule, GoogleMapsModule],
   providers: [],
   bootstrap: [AppComponent],
