@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NearByPlacesService } from '../services/getNearByPlaces.service';
+import { mockData } from '../utils/mock-data';
 
 @Component({
   selector: 'app-carousel',
@@ -10,11 +12,31 @@ export class CarouselComponent implements OnInit {
   carouselSize: number = 1;
   paginationFactor: number = 285;
   isEndOfList: boolean = false;
-  isHeadOfList: boolean = false;
+  isHeadOfList: boolean = true;
+  myNearByPlaces: any;
+  dynamicMarginLeft: number = 0;
+  showNav: boolean = false;
+  mockData = mockData;
 
-  constructor() {}
+  constructor(public nearByPlacesService: NearByPlacesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // add margin left to carsoul cards countainer dynamicly depending on curren screen width
+    this.dynamicMarginLeft =
+      screen.width < 768
+        ? screen.width / 2 - 140
+        : screen.width - (screen.width - 100);
+
+    this.nearByPlacesService.places$.subscribe((data) => {
+      if (data) {
+        this.myNearByPlaces = data.map((place: any) => {
+          return this.convertToPlaceSchema(place);
+        });
+        this.showNav = true;
+        console.log('this.nearByResults', this.myNearByPlaces);
+      }
+    });
+  }
 
   moveCarousel(direction: number) {
     if (direction === 1 && !this.isEndOfList) {
@@ -24,17 +46,24 @@ export class CarouselComponent implements OnInit {
     }
     this.isEndOfList = this.atEndOfList();
     this.isHeadOfList = this.atHeadOfList();
-
-    console.log(this.currentOffset);
   }
 
   atEndOfList() {
     return (
-      this.currentOffset <= this.paginationFactor * -1 * (2 - this.carouselSize)
+      this.currentOffset <=
+      this.paginationFactor * -1 * (20 - this.carouselSize)
     );
   }
 
   atHeadOfList() {
-    return this.currentOffset === this.paginationFactor;
+    return this.currentOffset === 0;
+  }
+
+  convertToPlaceSchema(data: any) {
+    let placeData = {
+      name: data.name,
+      photoUrl: data.photos[0].getUrl(),
+    };
+    return placeData;
   }
 }

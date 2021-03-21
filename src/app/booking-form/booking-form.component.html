@@ -1,0 +1,93 @@
+<form *ngIf="!formSubmitted" class="form-container">
+  <div class="form-section">
+    <h2 class="form-section-title">Personal Info</h2>
+    <div class="form__element-container">
+      <label for="first_name" class="site__label">
+        First Name
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="text" class="form__input" id="first_name" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="last_name" class="site__label">
+        Last Name
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="text" class="form__input" id="last_name" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="adress" class="site__label">
+        Adress
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="text" class="form__input" id="adress" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="country" class="site__label">
+        Country
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><select
+          name="country"
+          id="country"
+          class="form__input form__input--select"
+        >
+          <option value="">Select Country ...</option>
+          <option *ngFor="let country of countries" [value]="country.code">
+            {{ country.name }}
+          </option>
+        </select></span
+      >
+    </div>
+    <div class="form__element-container">
+      <label for="postal_code" class="site__label">
+        Postal Code
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="number" class="form__input" id="postal_code" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="city" class="site__label">
+        City
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="text" class="form__input" id="city" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="email" class="site__label">
+        Email
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="email" class="form__input" id="email" required
+      /></span>
+    </div>
+    <div class="form__element-container">
+      <label for="phone_number" class="site__label">
+        Phone Number
+        <span class="site__field-asterisk">*</span>
+      </label>
+      <span class="form__input-holder"
+        ><input type="number" class="form__input" id="phone_number" required
+      /></span>
+    </div>
+  </div>
+  <button class="submit-btn btn btn-cta" (click)="submitForm()">Submit</button>
+</form>
+<div *ngIf="formSubmitted" class="confirmation-container">
+  <h2 class="confirmation-container__title">You're all set!</h2>
+  <p class="confirmation-container__text">
+    We sent you an email with all booking details. Enjoy your stay.
+  </p>
+</div>

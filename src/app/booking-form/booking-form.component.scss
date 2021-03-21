@@ -1,0 +1,131 @@
+.form-container {
+  padding: 26px 16px 32px;
+  margin: 0 auto;
+}
+
+.form-section-title {
+  margin: 0 0 14px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #cccbc8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.form__element-container {
+  position: relative;
+  margin: 0 0 16px;
+  width: 100%;
+}
+
+.site__label {
+  margin: 0 0 10px;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4b4b4d;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.site__field-asterisk {
+  color: #ea414d;
+}
+
+.form__input-holder {
+  display: block;
+  position: relative;
+}
+
+.form__input {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  height: 48px;
+  border: 1px solid #747d85;
+  background: #f7f1e9;
+  box-sizing: border-box;
+  font-family: Gilmer, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #4b4b4d;
+  transition: padding 0.3s ease-in, border 0.2s ease-out,
+    box-shadow 0.2s ease-out;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 20px;
+  color: #f7f1e9;
+  background: transparent;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.btn-cta {
+  background: #4d6447;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn {
+  flex: 1;
+}
+
+.form__input--select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-indent: 1px;
+  background-image: url(../../assets/select_arrow.e038a9a9ac57cf3d89f8.svg);
+  background-position-y: center;
+  background-position-x: calc(100% - 15px);
+  background-repeat: no-repeat;
+  width: 100%;
+  color: #747d85;
+  padding: 10px 40px 10px 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.confirmation-container {
+  padding: 26px 16px 32px;
+  margin: 0 auto;
+}
+
+.confirmation-container__title {
+  margin: 0 0 14px;
+  padding: 0 0 14px;
+  border-bottom: 1px solid #cccbc8;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.confirmation-container__text {
+  font-size: 15px;
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+  line-height: 30px;
+}

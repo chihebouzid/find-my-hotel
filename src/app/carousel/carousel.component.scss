@@ -1,52 +1,57 @@
-.carousel{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+.carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 .carousel__cards {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: transform 150ms ease-out;
+  -webkit-transform: translatex(0px);
+  -moz-transform: translatex(0px);
+  -ms-transform: translatex(0px);
+  -o-transform: translatex(0px);
   transform: translatex(0px);
 }
 
-.carousel-wrapper{
+.carousel-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
 }
 
-.carousel-overflow-container{
+.carousel-overflow-container {
   overflow: hidden;
 }
 
 .carousel__card {
-    margin: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
 }
 
-.carousel__nav-btns{
+.carousel__nav-btns {
   display: flex;
   justify-content: space-between;
   width: 90vw;
-  position: absolute;  
+  position: absolute;
 }
 
-.nav-btn__left, .nav-btn__right{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-top: 2px solid orange;
-    border-right: 2px solid orange;
-    cursor: pointer;
-    margin: 0;
-    transition: transform 150ms linear;
+.nav-btn__left,
+.nav-btn__right {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-top: 4px solid #f7941d;
+  border-right: 4px solid #f7941d;
+  cursor: pointer;
+  margin: 0;
+  transition: transform 150ms linear;
 }
 
 .nav-btn--disabled {
@@ -55,15 +60,35 @@
 }
 
 .nav-btn__left {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
   &:active {
+    -webkit-transform: rotate(-135deg) scale(0.9);
+    -moz-transform: rotate(-135deg) scale(0.9);
+    -ms-transform: rotate(-135deg) scale(0.9);
+    -o-transform: rotate(-135deg) scale(0.9);
     transform: rotate(-135deg) scale(0.9);
   }
 }
 
 .nav-btn__right {
-    transform: rotate(45deg);
-    &:active {
-      transform: rotate(45deg) scale(0.9);
-    }
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  &:active {
+    -webkit-transform: rotate(45deg) scale(0.9);
+    -moz-transform: rotate(45deg) scale(0.9);
+    -ms-transform: rotate(45deg) scale(0.9);
+    -o-transform: rotate(45deg) scale(0.9);
+    transform: rotate(45deg) scale(0.9);
+  }
+}
+
+/////// Media Queries ///////////
+@media only screen and (min-device-width: 768px) and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) {
 }

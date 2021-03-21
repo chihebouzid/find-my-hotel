@@ -1,8 +1,15 @@
-<google-map
-  height="100vh"
-  width="100vw"
+<agm-map
+  #map
+  [latitude]="latitude"
+  [longitude]="longitude"
   [zoom]="zoom"
-  [center]="center"
-  [options]="options"
-  ><map-marker [position]="marker"> </map-marker>
-</google-map>
+  [disableDefaultUI]="true"
+>
+  <agm-marker [latitude]="latitude" [longitude]="longitude"> </agm-marker>
+  <agm-marker
+    *ngFor="let marker of nearByMarkers"
+    [latitude]="marker.lat"
+    [longitude]="marker.lng"
+    [iconUrl]="marker.icon"
+  ></agm-marker>
+</agm-map>

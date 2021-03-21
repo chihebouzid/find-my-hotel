@@ -4,23 +4,21 @@
       <div
         class="carousel__cards"
         [ngStyle]="{
-          transform: 'translateX' + '(' + currentOffset + 'px' + ')'
+          transform: 'translateX' + '(' + currentOffset + 'px' + ')',
+          marginLeft: dynamicMarginLeft + 'px'
         }"
       >
-        <div class="carousel__card">
-          <app-card></app-card>
-        </div>
-        <div class="carousel__card">
-          <app-card></app-card>
-        </div>
-        <div class="carousel__card">
-          <app-card></app-card>
+        <div *ngFor="let place of myNearByPlaces" class="carousel__card">
+          <app-card
+            [placeName]="place.name"
+            [placePhoto]="place.photoUrl"
+          ></app-card>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="carousel__nav-btns">
+  <div *ngIf="showNav" class="carousel__nav-btns">
     <div
       class="nav-btn__left"
       [class.nav-btn--disabled]="isHeadOfList"
