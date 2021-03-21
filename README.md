@@ -1,6 +1,6 @@
 # Find My Hotel
 
- > A feature developed for Limehome that allows booking of hotels near the user's current location. [DEMO](https://chihebouzid.github.io/findMyHotel).
+ > A feature developed for Limehome that allows booking of hotels near the user's current location. [DEMO](https://chihebouzid.github.io/find-my-hotel).
  
  <br />
  
