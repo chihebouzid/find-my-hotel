@@ -33,7 +33,6 @@ export class CarouselComponent implements OnInit {
           return this.convertToPlaceSchema(place);
         });
         this.showNav = true;
-        console.log('this.nearByResults', this.myNearByPlaces);
       }
     });
   }
@@ -60,9 +59,12 @@ export class CarouselComponent implements OnInit {
   }
 
   convertToPlaceSchema(data: any) {
+    let photos = data.photos[0].getUrl
+      ? data.photos[0].getUrl()
+      : 'https://q-xx.bstatic.com/images/hotel/max1024x768/282/282297641.jpg';
     let placeData = {
       name: data.name,
-      photoUrl: data.photos[0].getUrl(),
+      photoUrl: photos,
     };
     return placeData;
   }

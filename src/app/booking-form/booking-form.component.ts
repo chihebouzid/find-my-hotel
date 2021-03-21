@@ -1,3 +1,4 @@
+// TODO: Lazy load this component
 import { Component, OnInit } from '@angular/core';
 import { Countries } from '../utils/countries';
 
