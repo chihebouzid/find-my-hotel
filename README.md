@@ -1,27 +1,19 @@
-# FindMyHotel
+# Find My Hotel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+ > A feature developed for Limehome that allows booking of hotels near the user's current location. [DEMO](https://chihebouzid.github.io/findMyHotel).
+ 
+ <br />
+ 
+ <p align="center">
+  <img  src="https://github.com/chihebouzid/findMyHotel/blob/main/readme-assets/preview.gif">
+</p>
 
-## Development server
+:bulb: **Things I would do if I had more time:**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [ ] **Add tests** : Add unit and e2e tests because any project is considered uncomplete without tests. I did not have the time to do this but next time I will use the TDD approach to avoid such issue.
+- [ ] **Fix local storage issue** : current I save data fetched from the API in local storage to avoid multiple requests and to make the app a bit faster but if the user change his location the app will still show him old data from local storage. Should watch users position and update data in real time.
+- [ ] **Improve form** : Use Angular reactive formand improve form validation and over all handeling.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
