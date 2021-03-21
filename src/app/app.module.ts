@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { AgmCoreModule } from '@agm/core';
 import { NearByPlacesService } from './services/getNearByPlaces.service';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { GOOGLE_API_KEY } from 'constants';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCrLmtp66hyuSQbgpMVMThzKcF0wj1R5Q8',
+      apiKey: GOOGLE_API_KEY,
       libraries: ['places'],
     }),
   ],
